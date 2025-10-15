@@ -19,8 +19,38 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #326ce5 0%, #4a90e2 50%, #667eea 100%);
+            position: relative;
             min-height: 100vh;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 40% 20%, rgba(255, 255, 255, 0.06) 0%, transparent 50%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                repeating-linear-gradient(45deg, transparent, transparent 100px, rgba(255, 255, 255, 0.03) 100px, rgba(255, 255, 255, 0.03) 200px),
+                repeating-linear-gradient(-45deg, transparent, transparent 100px, rgba(255, 255, 255, 0.02) 100px, rgba(255, 255, 255, 0.02) 200px);
+            z-index: 0;
+            pointer-events: none;
         }
 
         .container {
@@ -49,7 +79,7 @@
         .logo {
             font-size: 1.8rem;
             font-weight: bold;
-            color: #667eea;
+            color: #326ce5;
         }
 
         .nav-links {
@@ -66,11 +96,13 @@
         }
 
         .nav-links a:hover {
-            color: #667eea;
+            color: #326ce5;
         }
 
         main {
             margin-top: 80px;
+            position: relative;
+            z-index: 1;
         }
 
         section {
@@ -107,7 +139,7 @@
             display: inline-block;
             padding: 12px 30px;
             background: #fff;
-            color: #667eea;
+            color: #326ce5;
             text-decoration: none;
             border-radius: 50px;
             font-weight: bold;
@@ -162,7 +194,7 @@
         .service-card h3 {
             font-size: 1.5rem;
             margin-bottom: 1rem;
-            color: #667eea;
+            color: #326ce5;
         }
 
         .tech-stack {
@@ -173,8 +205,8 @@
         }
 
         .tech-tag {
-            background: #f0f2ff;
-            color: #667eea;
+            background: #e6f2ff;
+            color: #326ce5;
             padding: 0.3rem 0.8rem;
             border-radius: 20px;
             font-size: 0.9rem;
@@ -214,7 +246,7 @@
         .form-group input:focus,
         .form-group textarea:focus {
             outline: none;
-            border-color: #667eea;
+            border-color: #326ce5;
         }
 
         .form-group textarea {
@@ -223,7 +255,7 @@
         }
 
         .submit-btn {
-            background: #667eea;
+            background: #326ce5;
             color: white;
             padding: 12px 30px;
             border: none;
@@ -236,7 +268,7 @@
         }
 
         .submit-btn:hover {
-            background: #5a6fd8;
+            background: #2558c7;
         }
 
         .captcha-container {
@@ -265,7 +297,7 @@
 
         .captcha-input:focus {
             outline: none;
-            border-color: #667eea;
+            border-color: #326ce5;
         }
 
         .submit-btn:disabled {
@@ -278,6 +310,8 @@
             color: white;
             text-align: center;
             padding: 2rem 0;
+            position: relative;
+            z-index: 1;
         }
 
         @media (max-width: 768px) {
