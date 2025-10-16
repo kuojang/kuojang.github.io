@@ -318,13 +318,22 @@
             .hero h1 {
                 font-size: 2.5rem;
             }
-            
+
             .nav-links {
                 gap: 1rem;
             }
-            
+
             .services-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr !important;
+                text-align: center;
+            }
+
+            .about-grid img {
+                margin: 0 auto;
             }
         }
     </style>
@@ -336,6 +345,7 @@
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -344,9 +354,27 @@
     <main>
         <section id="home" class="hero">
             <div class="container">
-                <h1>Expert Infrastructure & Platform Engineering Consulting</h1>
-                <p style="font-size: 1.4rem; margin-bottom: 2rem;">Scale your infrastructure with Kubernetes, Kafka, and cloud-native solutions</p>
+                <div style="margin-bottom: 1rem;">
+                    <span style="background: rgba(255, 255, 255, 0.2); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem; font-weight: 600;">CKA Certified Kubernetes Administrator</span>
+                </div>
+                <h1>Infrastructure & Platform Engineering Consulting</h1>
+                <p style="font-size: 1.3rem; margin-bottom: 1rem; font-weight: 600;">Build scalable, cost-efficient infrastructure with Kubernetes and Kafka</p>
+                <p style="font-size: 1.1rem; margin-bottom: 2rem;">Specialized in cloud migrations, data streaming platforms, and SRE/DevOps automation</p>
                 <a href="#services" class="cta-button">Explore Services</a>
+            </div>
+        </section>
+
+        <section style="background: rgba(255, 255, 255, 0.95); padding: 2rem 0;">
+            <div class="container" style="text-align: center;">
+                <p style="font-size: 1.1rem; color: #555; margin-bottom: 1rem;">Trusted by teams at:</p>
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin-bottom: 2rem;">
+                    <span style="color: #326ce5; font-weight: 600;">FinTech</span>
+                    <span style="color: #326ce5; font-weight: 600;">E-commerce</span>
+                    <span style="color: #326ce5; font-weight: 600;">SaaS</span>
+                    <span style="color: #326ce5; font-weight: 600;">MarkTech</span>
+                    <span style="color: #326ce5; font-weight: 600;">Gaming</span>
+                </div>
+                <p style="font-size: 0.95rem; color: #666;">Experience with companies from Series A startups to Enterprise</p>
             </div>
         </section>
 
@@ -357,7 +385,7 @@
                     <div class="service-card">
                         <span class="service-icon">☸️</span>
                         <h3>Kubernetes & Container Orchestration</h3>
-                        <p>Expert migration and deployment of services to Kubernetes. Certified Kubernetes Administrator (CKA) with extensive experience in EKS, GKE, and multi-cloud environments.</p>
+                        <p><strong>Deploy auto-scaling Kubernetes clusters that reduce on-call alerts and handle 10x traffic growth.</strong> CKA-certified expert providing zero-downtime migrations to EKS, GKE, and multi-cloud environments with automated GitOps deployments.</p>
                         <div class="tech-stack">
                             <span class="tech-tag">Kubernetes</span>
                             <span class="tech-tag">Docker</span>
@@ -369,7 +397,7 @@
                     <div class="service-card">
                         <span class="service-icon">🔄</span>
                         <h3>Apache Kafka & Data Streaming</h3>
-                        <p>Led adoption of Kafka in Data Engineering teams. Deployed and maintained Kafka clusters with expertise in data streaming architectures and event-driven systems.</p>
+                        <p><strong>Process millions of events per second with reliable, low-latency data pipelines.</strong> Build event-driven architectures that power real-time analytics, with proven expertise deploying and scaling Kafka clusters for high-volume production workloads.</p>
                         <div class="tech-stack">
                             <span class="tech-tag">Apache Kafka</span>
                             <span class="tech-tag">Spark</span>
@@ -381,7 +409,7 @@
                     <div class="service-card">
                         <span class="service-icon">🛠️</span>
                         <h3>SRE & DevOps Platform Engineering</h3>
-                        <p>Build reliable, scalable infrastructure with focus on incident response, monitoring, and automation. Experience reducing cloud costs by up to 90% while improving system reliability.</p>
+                        <p><strong>Achieve 99.99% uptime while cutting cloud costs dramatically.</strong> Build automated, observable infrastructure with comprehensive monitoring and incident response systems that let your team sleep better and ship faster.</p>
                         <div class="tech-stack">
                             <span class="tech-tag">Terraform</span>
                             <span class="tech-tag">Datadog</span>
@@ -393,7 +421,7 @@
                     <div class="service-card">
                         <span class="service-icon">☁️</span>
                         <h3>Multi-Cloud Infrastructure</h3>
-                        <p>Design and implement multi-cloud strategies across AWS, GCP, and Azure. Specializing in cost optimization, migrations, and cloud-native architectures.</p>
+                        <p><strong>Avoid vendor lock-in and optimize costs across AWS, GCP, and Azure.</strong> Execute seamless cloud migrations and build resilient multi-cloud architectures that give you flexibility, redundancy, and the best economics for each workload.</p>
                         <div class="tech-stack">
                             <span class="tech-tag">AWS</span>
                             <span class="tech-tag">GCP</span>
@@ -405,7 +433,7 @@
                     <div class="service-card">
                         <span class="service-icon">⚡</span>
                         <h3>Backend Development</h3>
-                        <p>Develop high-performance backend services using modern languages and frameworks. Experience with microservices architecture and API design.</p>
+                        <p><strong>Ship high-performance, scalable backend services faster.</strong> Build production-ready microservices and APIs with clean architecture, comprehensive testing, and expert guidance on Golang, Python, and Ruby that accelerate your team's velocity.</p>
                         <div class="tech-stack">
                             <span class="tech-tag">Golang</span>
                             <span class="tech-tag">Python</span>
@@ -417,7 +445,7 @@
                     <div class="service-card">
                         <span class="service-icon">🚨</span>
                         <h3>Incident Response & On-Call</h3>
-                        <p>Led multiple incident response teams with extensive on-call experience. Implement monitoring, alerting, and automated recovery systems to ensure high availability.</p>
+                        <p><strong>Reduce MTTR and eliminate alert fatigue for your on-call team.</strong> Implement intelligent monitoring, actionable alerting, and automated remediation that catches issues before customers notice and resolves incidents in minutes, not hours.</p>
                         <div class="tech-stack">
                             <span class="tech-tag">Incident Response</span>
                             <span class="tech-tag">Monitoring</span>
@@ -429,13 +457,128 @@
             </div>
         </section>
 
+        <section style="background: rgba(255, 255, 255, 0.95); padding: 3rem 0;">
+            <div class="container" style="max-width: 800px; margin: 0 auto;">
+                <h2 style="text-align: center; font-size: 2rem; margin-bottom: 2rem; color: #333;">Flexible Engagement Models</h2>
+                <div style="display: grid; gap: 1.5rem; text-align: center;">
+                    <div>
+                        <h4 style="color: #326ce5; margin-bottom: 0.5rem;">Fixed-Price Projects</h4>
+                        <p style="color: #666;">Defined scope with clear deliverables and timeline</p>
+                    </div>
+                    <div>
+                        <h4 style="color: #326ce5; margin-bottom: 0.5rem;">Monthly Retainers</h4>
+                        <p style="color: #666;">Ongoing support and strategic guidance for your infrastructure</p>
+                    </div>
+                    <div>
+                        <h4 style="color: #326ce5; margin-bottom: 0.5rem;">Hourly Consulting</h4>
+                        <p style="color: #666;">Flexible expertise for specific challenges and code reviews</p>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 2rem; color: #666; font-style: italic;">All engagements start with a free consultation to ensure we're a good fit</p>
+            </div>
+        </section>
+
+        <section id="results" class="services">
+            <div class="container">
+                <h2 class="section-title">Recent Projects</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <h3>Kubernetes Migration Success</h3>
+                        <p style="font-style: italic; color: #666; margin-bottom: 1rem;">"Migrated our entire infrastructure to Kubernetes with zero downtime. The platform now handles 10x our original traffic with improved reliability."</p>
+                        <p style="font-weight: 600; margin-bottom: 0.5rem;">Key Results:</p>
+                        <ul style="margin-left: 1.5rem; color: #555;">
+                            <li>200+ microservices migrated to EKS</li>
+                            <li>99.99% uptime achieved</li>
+                            <li>Automated deployment with ArgoCD</li>
+                        </ul>
+                        <p style="margin-top: 1rem; font-size: 0.9rem; color: #888;">— VP of Engineering, Series B SaaS Company</p>
+                    </div>
+
+                    <div class="service-card">
+                        <h3>Infrastructure Cost Optimization</h3>
+                        <p style="font-style: italic; color: #666; margin-bottom: 1rem;">"Reduced our monthly cloud costs by 90% while actually improving performance. The optimization strategies were game-changing for our startup."</p>
+                        <p style="font-weight: 600; margin-bottom: 0.5rem;">Key Results:</p>
+                        <ul style="margin-left: 1.5rem; color: #555;">
+                            <li>Cloud costs reduced from $120k to $12k/month</li>
+                            <li>Implemented spot instances and rightsizing</li>
+                            <li>Improved resource utilization by 80%</li>
+                        </ul>
+                        <p style="margin-top: 1rem; font-size: 0.9rem; color: #888;">— CTO, E-commerce Startup</p>
+                    </div>
+
+                    <div class="service-card">
+                        <h3>Kafka Data Pipeline Implementation</h3>
+                        <p style="font-style: italic; color: #666; margin-bottom: 1rem;">"Led our data engineering team through Kafka adoption. Now processing millions of events per second with confidence."</p>
+                        <p style="font-weight: 600; margin-bottom: 0.5rem;">Key Results:</p>
+                        <ul style="margin-left: 1.5rem; color: #555;">
+                            <li>Kafka cluster handling 5M+ events/second</li>
+                            <li>70% reduction in data pipeline latency</li>
+                            <li>Team training and best practices established</li>
+                        </ul>
+                        <p style="margin-top: 1rem; font-size: 0.9rem; color: #888;">— Head of Data Engineering, FinTech</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" style="background: rgba(255, 255, 255, 0.95); padding: 4rem 0;">
+            <div class="container" style="max-width: 900px; margin: 0 auto;">
+                <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #333;">About</h2>
+                <div class="about-grid" style="display: grid; grid-template-columns: 200px 1fr; gap: 3rem; align-items: start;">
+                    <img src="charles_small.JPG" alt="Charles Martinot" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; object-position: center 30%; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                    <div>
+                        <h3 style="color: #326ce5; margin-bottom: 1rem; font-size: 1.5rem;">Charles Martinot</h3>
+                        <p style="color: #555; line-height: 1.8; margin-bottom: 1rem;">CKA-certified Kubernetes Administrator with a passion for building scalable, reliable infrastructure. I've spent my career helping teams migrate to cloud-native architectures, optimize their infrastructure costs, and build platforms that scale effortlessly.</p>
+                        <p style="color: #555; line-height: 1.8; margin-bottom: 1rem;">My focus on Kubernetes and Kafka comes from seeing firsthand how these technologies transform how teams deploy and manage applications. There's nothing quite like watching a team go from manual deployments and frequent outages to automated, self-healing infrastructure that just works.</p>
+                        <p style="color: #555; line-height: 1.8;">I work with startups and mid-market companies who are ready to scale their infrastructure the right way - with best practices, automation, and a focus on long-term sustainability over quick fixes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="contact" class="contact">
             <div class="container">
-                <h2 class="section-title">Get In Touch</h2>
-                <div style="text-align: center;">
+                <h2 class="section-title">Ready to Scale Your Infrastructure?</h2>
+                <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+                    <p style="font-size: 1.1rem; margin-bottom: 2rem; color: #333;">Book a free 30-minute consultation to discuss your Kubernetes, Kafka, or cloud infrastructure challenges.</p>
                     <!-- Calendly link widget begin -->
-                    <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/charles-martinot-kuojang/30min'});return false;" class="cta-button" style="font-size: 1.1rem; padding: 15px 40px;">Schedule time with me</a>
+                    <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/charles-martinot-kuojang/30min'});return false;" class="cta-button" style="font-size: 1.1rem; padding: 15px 40px;">Schedule Free Consultation</a>
                     <!-- Calendly link widget end -->
+                    <p style="font-size: 0.9rem; margin-top: 1rem; color: #666;">Get tactical advice you can implement immediately - no obligation</p>
+
+                    <div style="margin-top: 3rem; text-align: left; background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                        <h3 style="color: #326ce5; margin-bottom: 1.5rem; text-align: center;">What to Expect</h3>
+                        <div style="display: grid; gap: 1rem;">
+                            <div style="display: flex; gap: 1rem;">
+                                <span style="color: #326ce5; font-weight: bold; font-size: 1.2rem;">1.</span>
+                                <div>
+                                    <strong>Schedule a free 30-minute call</strong>
+                                    <p style="color: #666; margin-top: 0.25rem;">Pick a time that works for you using the calendar above</p>
+                                </div>
+                            </div>
+                            <div style="display: flex; gap: 1rem;">
+                                <span style="color: #326ce5; font-weight: bold; font-size: 1.2rem;">2.</span>
+                                <div>
+                                    <strong>Discuss your specific challenges</strong>
+                                    <p style="color: #666; margin-top: 0.25rem;">We'll dive into your infrastructure goals, pain points, and constraints</p>
+                                </div>
+                            </div>
+                            <div style="display: flex; gap: 1rem;">
+                                <span style="color: #326ce5; font-weight: bold; font-size: 1.2rem;">3.</span>
+                                <div>
+                                    <strong>Get actionable recommendations</strong>
+                                    <p style="color: #666; margin-top: 0.25rem;">Walk away with tactical advice you can implement immediately</p>
+                                </div>
+                            </div>
+                            <div style="display: flex; gap: 1rem;">
+                                <span style="color: #326ce5; font-weight: bold; font-size: 1.2rem;">4.</span>
+                                <div>
+                                    <strong>Receive a proposal (if there's a fit)</strong>
+                                    <p style="color: #666; margin-top: 0.25rem;">If we're a good match, I'll send a detailed proposal within 48 hours</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -457,6 +600,6 @@
             });
         });
     </script>
-    <script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/charles-martinot-kuojang/30min', text: 'Schedule time with me', color: '#0069ff', textColor: '#ffffff', branding: true }); }</script>
+    <script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/charles-martinot-kuojang/30min', text: 'Schedule Free Consultation', color: '#326ce5', textColor: '#ffffff', branding: true }); }</script>
 </body>
 </html>
